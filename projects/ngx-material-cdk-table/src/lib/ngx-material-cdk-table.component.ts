@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-ngx-material-cdk-table',
-  template: `
-    <p>
-      ngx-material-cdk-table works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './ngx-material-cdk-table.component.html',
+  styleUrls: ['./ngx-material-cdk-table.component.scss'],
 })
 export class NgxMaterialCdkTableComponent implements OnInit {
 
-  constructor() { }
+  @Input() dataSource: any[] = [];
+  @Input() displayedColumns: string[] = [];
 
   ngOnInit(): void {
   }
-
 }

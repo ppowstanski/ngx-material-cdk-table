@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgxMaterialCdkTableComponent } from './ngx-material-cdk-table.component';
-
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -8,6 +8,7 @@ import { NgxMaterialCdkTableComponent } from './ngx-material-cdk-table.component
     NgxMaterialCdkTableComponent
   ],
   imports: [
+    MatTableModule
   ],
   exports: [
     NgxMaterialCdkTableComponent
