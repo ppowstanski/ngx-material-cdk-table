@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-material-cdk-table": [
+        "dist/ngx-material-cdk-table/ngx-material-cdk-table",
+        "dist/ngx-material-cdk-table"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

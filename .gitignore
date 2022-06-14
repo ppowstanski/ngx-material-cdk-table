@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# System files
+/projects/demo/node_modules
+/projects/ngx-material-cdk-table/node_modules
