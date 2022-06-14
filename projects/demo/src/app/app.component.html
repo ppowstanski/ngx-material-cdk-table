@@ -1,1 +1,14 @@
-<lib-ngx-material-cdk-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></lib-ngx-material-cdk-table>
+<ngx-material-grid [dataSource]="dataSource" [displayedColumns]="displayedColumns">
+    <ng-container ngxGridColumn="name">
+        <span *ngxHeaderCell>Name</span>
+        <span *ngxDataCell="let element">{{element.name}}</span>
+    </ng-container>
+    <ng-container ngxGridColumn="weight">
+        <span *ngxHeaderCell>Weight</span>
+        <span *ngxDataCell="let element">{{element.weight}}</span>
+    </ng-container>
+    <ng-container ngxGridColumn="symbol">
+        <span *ngxHeaderCell>Symbol</span>
+        <span *ngxDataCell="let element">{{element.symbol}}</span>
+    </ng-container>>
+</ngx-material-grid>
