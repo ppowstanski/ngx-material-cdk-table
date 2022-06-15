@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NgxGridDataSource } from 'ngx-material-cdk-table';
+
+
+
 
 export interface PeriodicElement {
   name: string;
@@ -38,7 +42,38 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 27, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
   {position: 28, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
   {position: 29, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 30, name: 'Neon', weight: 20.1797, symbol: 'Ne'}
+  {position: 30, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 41, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 42, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 43, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 44, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 45, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 46, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 47, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 48, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 49, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 50, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 51, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 52, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 53, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 54, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 55, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 56, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 57, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 58, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 59, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 60, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 71, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 71, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 72, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 73, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 74, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 75, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 76, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 77, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 78, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 79, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 80, name: 'Neon', weight: 20.1797, symbol: 'Ne'}
 ];
 
 @Component({
@@ -48,6 +83,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AppComponent {
   title = 'demo';
-  dataSource = ELEMENT_DATA;
-  displayedColumns = ['name', 'weight', 'symbol'];
+  dataSource = new NgxGridDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns = ['name', 'weight', 'symbol'];  
 }

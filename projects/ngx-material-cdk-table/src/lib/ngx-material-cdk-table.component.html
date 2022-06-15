@@ -1,14 +1,15 @@
-<table mat-table [dataSource]="dataSource" style="width: 100%">
+<cdk-virtual-scroll-viewport [itemSize]="2" matSort style="height: 100%" [itemSize]="40">
+    <table mat-table [dataSource]="dataSource" style="width: 100%">
+        <ng-container *ngFor="let column of tableColumns" [matColumnDef]="column.name">
+            <th mat-header-cell *matHeaderCellDef>
+                <ng-container *ngTemplateOutlet="column.headerCell"></ng-container>
+            </th>
+            <td mat-cell *matCellDef="let element">
+                <ng-container *ngTemplateOutlet="column.dataCell; context: {$implicit: element}"></ng-container>
+            </td>
+        </ng-container>
 
-    <ng-container *ngFor="let column of tableColumns" [matColumnDef]="column.name">
-        <th mat-header-cell *matHeaderCellDef>
-            <ng-container *ngTemplateOutlet="column.headerCell"></ng-container>
-        </th>
-        <td mat-cell *matCellDef="let element">
-            <ng-container *ngTemplateOutlet="column.dataCell; context: {$implicit: element}"></ng-container>
-        </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</cdk-virtual-scroll-viewport>

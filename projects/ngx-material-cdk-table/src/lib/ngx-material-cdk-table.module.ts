@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderCellDirective } from './definitions/header-cell';
 import { DataCellDirective } from './definitions/data-cell';
 import { TableColumnDirective } from './definitions/table-column';
-
+import { CdkTableModule } from '@angular/cdk/table';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { TableColumnDirective } from './definitions/table-column';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    CdkTableModule,
+    ScrollingModule
   ],
   exports: [
     HeaderCellDirective,
